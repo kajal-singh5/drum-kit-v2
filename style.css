@@ -1,0 +1,55 @@
+.container {
+    height: 100%;
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    background-color: whitesmoke;
+}
+
+.bass-drum {
+    transform: scale3d(1, 1, 1);
+    transform-origin: top;
+}
+
+.bass-drum:active .bass-drum-head {
+    transform: scale3d(1.055, 1.055, 1.055);
+    transform-origin: center;
+}
+
+.floor-tom,
+.snare-drum,
+.high-tom,
+.med-tom {
+    transform: scale3d(1, 1, 1);
+    transform-origin: top;
+}
+
+.floor-tom:active .floor-tom-head,
+.snare-drum:active .snare-drum-head {
+    transform: scale3d(1, .97, 1);
+    transform-origin: bottom;
+}
+
+.high-tom:active .high-tom-head,
+.med-tom:active .med-tom-head {
+    transform: scale3d(1, .95, 1);
+    transform-origin: center;
+}
+
+.hi-hats,
+.cymbal {
+    transform: rotate3d(0, 0, 0, 0deg);
+    transform-origin: top;
+}
+
+.hi-hats:active .hi-hats-head {
+    transform: rotate3d(1, 1, 0.2, 03deg);
+    transform-origin: left;
+}
+
+.cymbal:active .cymbal-head {
+    transform: rotate3d(1, 1, 0.2, -10deg);
+    transform-origin: top;
+}
