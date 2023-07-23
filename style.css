@@ -137,6 +137,10 @@ aside input:checked ~ label {
     fill: whitesmoke;
 }
 
+.container:has(aside .toggle-keyboard-keys input:checked) .keys {
+    visibility: hidden;
+}
+
 footer {
     grid-area: footer;
     font-size: 1.5rem;
