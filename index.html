@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Drum Kit Interactive</title>
 </head>
 
 <body>
     <div class="container">
-        <section class="drums">
+        <header>
+            Drum Kit
+        </header>
+
+        <main class="drums">
             <svg xmlns="http://www.w3.org/2000/svg" width="75vw" height="60vh" fill="none" viewBox="0 0 5217 3110">
                 <g id="drum-shadow" class="drum-shadow">
                     <ellipse cx="2608.2" cy="2794.08" fill="#EDECEC" rx="2607.87" ry="315.713" />
@@ -273,8 +280,27 @@
                         </g>
                     </g>
                 </g>
+
+                <text x="1850" y="200" fill="black" class="keys">W</text>
+                <text x="3150" y="200" fill="black" class="keys">A</text>
+                <text x="1370" y="2800" fill="black" class="keys">S</text>
+                <text x="3650" y="2800" fill="black" class="keys">D</text>
+                <text x="-20" y="250" fill="black" class="keys">J</text>
+                <text x="5000" y="1050" fill="black" class="keys">K</text>
+                <text x="2500" y="3090" fill="black" class="keys">L</text>
             </svg>
-        </section>
+        </main>
+
+        <aside>
+            <input type="checkbox" class="toggle-dark-mode" id="dark-mode">
+            <label for="dark-mode">DARK MODE</label>
+            <input type="checkbox" class="toggle-keys" id="hide-keys">
+            <label for="hide-keys">HIDE KEYS</label>
+        </aside>
+
+        <footer>
+            by Kajal Singh
+        </footer>
     </div>
     <script src="script.js"></script>
 </body>
