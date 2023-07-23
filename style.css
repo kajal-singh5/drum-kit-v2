@@ -7,7 +7,7 @@ body {
     height: 100%;
 
     display: grid;
-    grid-template: 8vw auto 8vw / auto 3vw;
+    grid-template: 5rem auto 5rem / auto 4vw;
     grid-template-areas: 
     "header aside"
     "drums aside"
@@ -78,17 +78,15 @@ body {
 header {
     grid-area: header;
     font-size: 2.5rem;
-    align-self: end;
-}
-
-aside,
-aside label {
-    width: 100%;
-    height: 100%;
+    padding: 1rem;
+    justify-self: start;
+    align-self: center;
 }
 
 aside {
     grid-area: aside;
+    width: 100%;
+    height: 100%;
 
     writing-mode: vertical-rl;
     font-size: 1.5rem;
@@ -100,18 +98,43 @@ aside {
     align-items: center;
 }
 
+aside > div {
+    width: 100%;
+    height: 100%;
+}
+
 aside input {
     display: none;
+}
+
+aside label {
+    display: inline-block;
+    block-size: 100%;
+    inline-size: 100%;
+    padding: 0 1rem 0 0;
 }
 
 aside label:hover,
 aside label:focus {
     color: #FF008C;
-    background-color: black;
+    background-color: #4D4D4D;
 }
 
 aside input:checked ~ label {
     text-decoration-line: line-through;
+}
+
+.container:has(aside .toggle-dark-mode input:checked) {
+    background-color: #1F1F1F;
+    color: whitesmoke;
+}
+
+.container:has(aside .toggle-dark-mode input:checked) .drum-shadow ellipse {
+    fill: #4D4D4D;
+}
+
+.container:has(aside .toggle-dark-mode input:checked) .keys {
+    fill: whitesmoke;
 }
 
 footer {
